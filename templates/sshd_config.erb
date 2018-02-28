@@ -36,7 +36,7 @@ ListenAddress <%= @sshd_listen_address %>
 # HostKeys for protocol version 2
 #HostKey /etc/ssh/ssh_host_rsa_key
 #HostKey /etc/ssh/ssh_host_dsa_key
-<% if @sshd_config_hostkey_real %>
+<% if @sshd_config_hostkey_real != nil -%>
 <% @sshd_config_hostkey_real.each do |hostkey| -%>
 HostKey <%= hostkey %>
 <% end -%>
